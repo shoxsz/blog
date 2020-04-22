@@ -3,6 +3,7 @@ import Div from '../../atoms/Div/Div'
 
 import './IndexPage.sass'
 import Icon from '../../atoms/Icon/Icon'
+import Content from '../../organisms/Content/Content'
 
 export type IndexPageProps = {
   
@@ -13,7 +14,7 @@ export default class IndexPage extends React.Component<IndexPageProps>{
     return (
       <Div className="content">
         <Div className="left-content">
-          <Icon icon="fa fa-eye" color="red" hoverColor="blue" hoverHand />
+          <Content/>
         </Div>
       </Div>
     )
