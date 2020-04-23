@@ -5,12 +5,14 @@ export type CardProps = {
   borderRadius?: string
   margin?: string
   padding?: string
+  className?: string
 }
 
 export default class Card extends React.Component<CardProps>{
   render(){
     return (
       <Div
+      className={ this.getClassName() }
       margin={ this.props.margin }
       padding={ this.props.padding || "8px" }
       borderRadius={ this.props.borderRadius || "8px" }
@@ -18,5 +20,15 @@ export default class Card extends React.Component<CardProps>{
         { this.props.children }
       </Div>
     )
+  }
+
+  private getClassName(){
+    const className = ["card"]
+
+    if(!!this.props.className){
+      className.push(this.props.className)
+    }
+
+    return className.join(" ")
   }
 }

@@ -12,11 +12,7 @@ export type IndexPageProps = {
 export default class IndexPage extends React.Component<IndexPageProps>{
   render(){
     return (
-      <Div className="content">
-        <Div className="left-content">
-          <Content/>
-        </Div>
-      </Div>
+      <Content/>
     )
   }
 }
