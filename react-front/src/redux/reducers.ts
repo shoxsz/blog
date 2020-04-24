@@ -4,3 +4,10 @@ export const tagsReducer = function(state : any, action : any){
     tags: action.tags
   }
 }
+
+export const postsReducer = function(state : any, action : any){
+  return {
+    ...state,
+    posts: action.posts
+  }
+}

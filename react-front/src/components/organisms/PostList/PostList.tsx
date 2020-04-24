@@ -3,66 +3,16 @@ import Div from '../../atoms/Div/Div'
 import PostPreview from '../PostPreview/PostPreview'
 
 import './PostList.sass'
+import { PostData } from '../../../lib/types'
 
 export type PostListProps = {
+  posts: PostData[]
   width?: string
   horizontal?: boolean
   itemsPerLine?: 1 | 2 | 3 | 4
 }
 
 export default class PostList extends React.Component<PostListProps>{
-  postList = [
-    {
-      image: "minotaur.png",
-      title: "Bem vindo ao Blog",
-      postedBy: "Paulo Márcio",
-      tags: ["gamedev", "opengl"],
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      image: "minotaur.png",
-      title: "Bem vindo ao Blog",
-      postedBy: "Paulo Márcio",
-      tags: ["gamedev", "opengl"],
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      image: "minotaur.png",
-      title: "Bem vindo ao Blog",
-      postedBy: "Paulo Márcio",
-      tags: ["gamedev", "opengl"],
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      image: "minotaur.png",
-      title: "Bem vindo ao Blog",
-      postedBy: "Paulo Márcio",
-      tags: ["gamedev", "opengl"],
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      image: "minotaur.png",
-      title: "Bem vindo ao Blog",
-      postedBy: "Paulo Márcio",
-      tags: ["gamedev", "opengl"],
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      image: "minotaur.png",
-      title: "Bem vindo ao Blog",
-      postedBy: "Paulo Márcio",
-      tags: ["gamedev", "opengl"],
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      image: "minotaur.png",
-      title: "Bem vindo ao Blog",
-      postedBy: "Paulo Márcio",
-      tags: ["gamedev", "opengl"],
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
-  ]
-
   render(){
     return (
       <Div
@@ -77,7 +27,7 @@ export default class PostList extends React.Component<PostListProps>{
   }
 
   private renderPostList(){
-    return this.postList.map((postPreview, index) => {
+    return this.props.posts.map((postPreview, index) => {
       return (
         <Div key={ index } className="post-preview-div" width={ this.getPostPreviewWidth() }>
           <PostPreview preview={ postPreview } />

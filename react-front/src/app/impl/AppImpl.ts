@@ -2,8 +2,8 @@ import App from "../App";
 import { createStore } from "redux";
 import AppReducer from "../../redux";
 import { backendService } from "../../services";
-import { tagsAction } from "../../redux/actions";
-import { TagData } from "../../lib/types";
+import { tagsAction, postsAction } from "../../redux/actions";
+import { TagData, PostData } from "../../lib/types";
 
 export default class AppImpl implements App{
   reduxStore
@@ -23,6 +23,15 @@ export default class AppImpl implements App{
 
   getTags() : TagData[]{
     return this.reduxStore.getState().tags
+  }
+
+  async loadPosts(){
+    const posts = await backendService.posts()
+    this.reduxStore.dispatch(postsAction(posts))
+  }
+
+  getPosts() : PostData[]{
+    return this.reduxStore.getState().posts
   }
 
   subscribe(listener : () => void){

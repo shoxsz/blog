@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { PostPreviewData } from "../../../lib/types";
+import { PostData } from "../../../lib/types";
 import Div from '../../atoms/Div/Div';
 
 import './PostPreview.sass'
 import Card from '../../molecules/Card/Card';
 
 export type PostPreviewProps = {
-  preview: PostPreviewData
+  preview: PostData
 }
 
 export default class PostPreview extends React.Component<PostPreviewProps>{
@@ -38,12 +38,12 @@ export default class PostPreview extends React.Component<PostPreviewProps>{
         <Div className="post-preview__data__tags">{ this.props.preview.tags.join(" ") }</Div>
         <Div className="post-preview__data__text">
           <p>
-            { this.props.preview.text }
+            { this.props.preview.excerpt }
           </p>
           {/* <a href="#">Ler mais</a> */}
         </Div>
         <Div className="post-preview__data__postedBy">
-          Por <span>{ this.props.preview.postedBy }</span>
+          Por <span>{ this.props.preview.authors[0] }</span>
         </Div>
       </Div>
     )

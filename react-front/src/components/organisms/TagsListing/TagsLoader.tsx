@@ -4,7 +4,7 @@ import { app } from "../../../app";
 import { TagData } from "../../../lib/types";
 
 type TagsLoaderState = {
-  loadingTags: boolean,
+  loading: boolean,
   tags: TagData[]
 }
 
@@ -19,7 +19,7 @@ export default class TagsLoader extends React.Component<TagsLoaderProps, TagsLoa
     super(props)
 
     this.state = {
-      loadingTags: true,
+      loading: true,
       tags: []
     }
 
@@ -27,7 +27,12 @@ export default class TagsLoader extends React.Component<TagsLoaderProps, TagsLoa
   }
 
   private handleAppState(){
-    this.setState({ loadingTags: false, tags: app.getTags() })
+    if(this.state.loading){
+      const tags = app.getTags()
+      if(tags.length > 0){
+        this.setState({ loading: false, tags })
+      }
+    }
   }
 
   componentDidMount(){
@@ -39,7 +44,7 @@ export default class TagsLoader extends React.Component<TagsLoaderProps, TagsLoa
   }
 
   render(){
-    if(this.state.loadingTags){
+    if(this.state.loading){
       return <span>Loading tags...</span>
     }
 

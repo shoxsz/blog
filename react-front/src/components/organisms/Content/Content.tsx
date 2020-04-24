@@ -6,6 +6,7 @@ import PostList from '../PostList/PostList'
 
 import './Content.sass'
 import ContentRight from '../ContentRight/ContentRight'
+import PostsLoader from '../PostList/PostsLoader'
 
 export type ContentProps = {
 
@@ -16,7 +17,10 @@ export default class Content extends React.Component<ContentProps>{
     return (
       <Card className="content-card" margin="48px" padding="48px">
         <Div display="flex" width="100%">
-          <PostList width="78%" horizontal/>
+          <PostsLoader 
+          postListFactory={
+            (posts) => <PostList posts={ posts } width="78%" horizontal />
+          }/>
           <ContentRight width="22%"/>
         </Div>
       </Card>

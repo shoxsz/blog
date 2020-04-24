@@ -1,9 +1,12 @@
-export type PostPreviewData = {
-  image: string
+export type PostData = {
   title: string
-  text: string
+  html: string
+  createdAt: Date
+  updatedAt: Date
+  excerpt: string
+  image: string
+  authors: string[]
   tags: string[]
-  postedBy: string
 }
 
 export type TagData = {

@@ -1,10 +1,11 @@
 import { createStore } from "redux";
-import { TAGS } from "./consts";
-import { tagsReducer } from "./reducers";
+import { TAGS, POSTS } from "./consts";
+import { tagsReducer, postsReducer } from "./reducers";
 
 const initialState = function(){
   return {
-    tags: []
+    tags: [],
+    posts: []
   }
 }
 
@@ -16,5 +17,7 @@ export default function AppReducer(state : any, action : any){
   switch(action.type){
     case TAGS:
       return tagsReducer(state, action)
+    case POSTS:
+      return postsReducer(state, action)
   }
 }
