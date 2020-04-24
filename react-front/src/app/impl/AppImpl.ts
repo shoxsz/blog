@@ -25,8 +25,8 @@ export default class AppImpl implements App{
     return this.reduxStore.getState().tags
   }
 
-  async loadPosts(){
-    const posts = await backendService.posts()
+  async loadPosts(page: number, limit: number){
+    const posts = await backendService.posts(page, limit)
     this.reduxStore.dispatch(postsAction(posts))
   }
 

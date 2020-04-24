@@ -4,6 +4,7 @@ import PostPreview from '../PostPreview/PostPreview'
 
 import './PostList.sass'
 import { PostData } from '../../../lib/types'
+import Pagination from '../../molecules/Pagination/Pagination'
 
 export type PostListProps = {
   posts: PostData[]
@@ -16,14 +17,16 @@ export type PostListProps = {
 export default class PostList extends React.Component<PostListProps>{
   render(){
     return (
-      <Div
-      className={ this.props.className }
-      width={ this.props.width || "100%"}
-      display="flex"
-      flexWrap="wrap"
-      flexDirection={ this.getFlexDirection() }
-      >
-        { this.renderPostList() }
+      <Div width={ this.props.width || "100%"}>
+        <Div
+        className={ this.props.className }
+        width="100%"
+        display="flex"
+        flexWrap="wrap"
+        flexDirection={ this.getFlexDirection() }
+        >
+          { this.renderPostList() }
+        </Div>
       </Div>
     )
   }

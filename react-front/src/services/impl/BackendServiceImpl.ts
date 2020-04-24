@@ -8,8 +8,13 @@ export default class BackendServiceImpl implements BackendService{
     return result.data
   }
 
-  async posts() : Promise<PostData[]>{
-    const result = await axios.get("http://localhost:3030/posts")
+  async posts(page : number, limit : number) : Promise<PostData[]>{
+    const result = await axios.get("http://localhost:3030/posts", {
+      params: {
+        page,
+        limit
+      }
+    })
     return result.data
   }
 }

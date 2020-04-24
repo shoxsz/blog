@@ -6,7 +6,8 @@ import PostList from '../PostList/PostList'
 
 import './Content.sass'
 import ContentRight from '../ContentRight/ContentRight'
-import PostsLoader from '../PostList/PostsLoader'
+import PostsFeeder from '../PostList/PostsFeeder'
+import PostsPagination from '../PostsPagination/PostsPagination'
 
 export type ContentProps = {
 
@@ -18,10 +19,11 @@ export default class Content extends React.Component<ContentProps>{
       <Card className="content-card" margin="48px" padding="48px">
         <Div display="flex" width="100%" flexWrap="wrap">
           <Div className="content__left">
-            <PostsLoader 
+            <PostsFeeder 
             postListFactory={
               (posts) => <PostList posts={ posts } horizontal />
             }/>
+            <PostsPagination/>
           </Div>
           <Div className="content__right">
             <ContentRight/>

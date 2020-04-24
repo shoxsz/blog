@@ -4,16 +4,16 @@ import Div from "../../atoms/Div/Div";
 import PostList from "./PostList";
 import { app } from "../../../app";
 
-type PostsLoaderState = {
+type PostsFeederState = {
   loading: boolean,
   posts: PostData[]
 }
 
-export type PostsLoaderProps = {
+export type PostsFeederProps = {
   postListFactory: (posts : PostData[]) => React.ReactNode
 }
 
-export default class PostsLoader extends React.Component<PostsLoaderProps, PostsLoaderState>{
+export default class PostsFeeder extends React.Component<PostsFeederProps, PostsFeederState>{
   readonly appSub : any
   public constructor(props){
     super(props)
@@ -27,16 +27,10 @@ export default class PostsLoader extends React.Component<PostsLoaderProps, Posts
   }
 
   private handleAppState(){
-    if(this.state.loading){
-      const posts = app.getPosts()
-      if(posts.length > 0){
-        this.setState({ loading: false, posts })
-      }
+    const posts = app.getPosts()
+    if(posts.length > 0){
+      this.setState({ loading: false, posts })
     }
-  }
-
-  componentDidMount(){
-    app.loadPosts()
   }
 
   componentWillUnmount(){
