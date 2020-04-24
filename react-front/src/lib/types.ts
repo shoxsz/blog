@@ -7,6 +7,5 @@ export type PostPreviewData = {
 }
 
 export type TagData = {
-  tagName: string
-  tagPercentage: number
+  title: string
 }
