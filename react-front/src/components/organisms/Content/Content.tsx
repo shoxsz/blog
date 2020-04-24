@@ -16,12 +16,16 @@ export default class Content extends React.Component<ContentProps>{
   render(){
     return (
       <Card className="content-card" margin="48px" padding="48px">
-        <Div display="flex" width="100%">
-          <PostsLoader 
-          postListFactory={
-            (posts) => <PostList posts={ posts } width="78%" horizontal />
-          }/>
-          <ContentRight width="22%"/>
+        <Div display="flex" width="100%" flexWrap="wrap">
+          <Div className="content__left">
+            <PostsLoader 
+            postListFactory={
+              (posts) => <PostList posts={ posts } horizontal />
+            }/>
+          </Div>
+          <Div className="content__right">
+            <ContentRight/>
+          </Div>
         </Div>
       </Card>
     )

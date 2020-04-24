@@ -11,7 +11,7 @@ export type ContentRightProps = {
 export default class ContentRight extends React.Component<ContentRightProps>{
   render(){
     return (
-      <Div width={ this.props.width }>
+      <Div width={ this.props.width || "100%" }>
         <SearchPostInput/>
         <Div mt="16px">
           <h3>Tags</h3>

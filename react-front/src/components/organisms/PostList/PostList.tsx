@@ -10,12 +10,14 @@ export type PostListProps = {
   width?: string
   horizontal?: boolean
   itemsPerLine?: 1 | 2 | 3 | 4
+  className?: string
 }
 
 export default class PostList extends React.Component<PostListProps>{
   render(){
     return (
       <Div
+      className={ this.props.className }
       width={ this.props.width || "100%"}
       display="flex"
       flexWrap="wrap"

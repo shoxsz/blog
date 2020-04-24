@@ -1,9 +1,15 @@
 .content-card
   background: white
 
-  .content-card__posts
-    width: 100%
+  .content__left
+    width: 72%
 
-@media ( min-width: 600px )
-  .content-card__posts
-    width: 100%
+  .content__right
+    left: 20%
+
+@media ( max-width: 768px )
+  .content__left
+    width: 100% !important
+
+  .content__right
+    width: 100% !important

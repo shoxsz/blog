@@ -19,9 +19,11 @@ export default class PostServiceImpl implements PostService{
     })
   }
 
-  async posts(offset : number, limit : number) : Promise<Post[]>{
+  async posts(page : number, limit : number) : Promise<Post[]>{
     const result = await axios.get(getGhostUrl("content/posts/", {
-      include: 'authors,tags'
+      include: 'authors,tags',
+      page,
+      limit
     }))
 
     const data = result.data
