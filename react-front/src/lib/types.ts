@@ -5,3 +5,8 @@ export type PostPreviewData = {
   tags: string[]
   postedBy: string
 }
+
+export type TagData = {
+  tagName: string
+  tagPercentage: number
+}
