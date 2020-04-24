@@ -77,9 +77,9 @@ export default class PostList extends React.Component<PostListProps>{
   }
 
   private renderPostList(){
-    return this.postList.map(postPreview => {
+    return this.postList.map((postPreview, index) => {
       return (
-        <Div className="post-preview-div" width={ this.getPostPreviewWidth() }>
+        <Div key={ index } className="post-preview-div" width={ this.getPostPreviewWidth() }>
           <PostPreview preview={ postPreview } />
         </Div>
       )

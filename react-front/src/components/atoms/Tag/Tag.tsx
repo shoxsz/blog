@@ -11,7 +11,7 @@ export type TagProps = {
 export default class Tag extends React.Component<TagProps>{
   render(){
     return (
-      <Div className="tag">{ this.props.tag.tagName }</Div>
+      <Div className="tag">{ this.props.tag.title }</Div>
     )
   }
 }

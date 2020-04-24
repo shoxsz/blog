@@ -3,7 +3,9 @@ import { TAGS } from "./consts";
 import { tagsReducer } from "./reducers";
 
 const initialState = function(){
-
+  return {
+    tags: []
+  }
 }
 
 export default function AppReducer(state : any, action : any){
