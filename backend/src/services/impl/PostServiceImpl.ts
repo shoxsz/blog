@@ -19,27 +19,16 @@ export default class PostServiceImpl implements PostService{
     })
   }
 
-  async posts(page : number, limit : number) : Promise<PaginatedData<Post>>{
-    const result = await axios.get(getGhostUrl("content/posts/", {
-      include: 'authors,tags',
-      page,
-      limit
-    }))
+  async posts(page : number, limit : number, filter : string) : Promise<PaginatedData<Post>>{
+    const queryParams = this.buildQueryParams(page, limit, filter)
+
+    const result = await axios.get(getGhostUrl("content/posts/", queryParams))
 
     const data = result.data
     const ghostPosts : GhostPost[] = data.posts
 
     const postsArray = ghostPosts.map((post : GhostPost) => {
-      return {
-        title: post.title,
-        createdAt: new Date(post.created_at),
-        updatedAt: new Date(post.updated_at),
-        excerpt: post.excerpt,
-        html: post.html,
-        image: post.feature_image,
-        authors: post.authors.map(author => author.slug),
-        tags: post.tags.map(tag => tag.name),
-      }
+      return this.ghostPostToPost(post)
     })
 
     return {
@@ -49,5 +38,41 @@ export default class PostServiceImpl implements PostService{
       pageCount: data.meta.pagination.pages,
       total: data.meta.pagination.total
     }
+  }
+
+  private ghostPostToPost(post : GhostPost){
+    return{
+      title: post.title,
+      createdAt: new Date(post.created_at),
+      updatedAt: new Date(post.updated_at),
+      excerpt: post.excerpt,
+      html: post.html,
+      image: post.feature_image,
+      authors: post.authors.map(author => author.slug),
+      tags: post.tags.map(tag => tag.name),
+    }
+  }
+
+  private buildQueryParams(page : number, limit : number, filter : string){
+    const queryParams : any = {
+      include: 'authors,tags',
+      page,
+      limit
+    }
+
+    if(!!filter){
+      queryParams.filter = this.buildPostFilter(filter)
+    }
+
+    return queryParams
+  }
+
+  private buildPostFilter(filter : string){
+    const filterByPostTitle = `posts.title:'${filter}'`
+    const filterByPostSlug = `posts.slug:'${filter}'`
+    const filterByTagName = `tags.name:'${filter}'`
+    const filterByTagSlug = `tags.slug:'${filter}'`
+
+    return `${filterByPostTitle},${filterByPostSlug},${filterByTagName},${filterByTagSlug}`
   }
 }

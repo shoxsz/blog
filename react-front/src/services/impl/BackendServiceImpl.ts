@@ -8,11 +8,12 @@ export default class BackendServiceImpl implements BackendService{
     return result.data
   }
 
-  async posts(page : number, limit : number) : Promise<PaginatedData<PostData>>{
+  async posts(filter: string, page : number, limit : number) : Promise<PaginatedData<PostData>>{
     const result = await axios.get("http://localhost:3030/posts", {
       params: {
         page,
-        limit
+        limit,
+        filter
       }
     })
     return result.data

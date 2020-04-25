@@ -27,10 +27,8 @@ export default class PostsFeeder extends React.Component<PostsFeederProps, Posts
   }
 
   private handleAppState(){
-    const paginatedPosts = app.getPosts()
-    if(paginatedPosts.dataArray.length > 0){
-      this.setState({ loading: false, posts: paginatedPosts.dataArray })
-    }
+    const paginatedPosts = app.getPosts() || []
+    this.setState({ loading: false, posts: paginatedPosts.dataArray })
   }
 
   componentWillUnmount(){

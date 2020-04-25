@@ -18,15 +18,17 @@ export default class PostsPagination extends React.Component<PostsPaginationProp
     super(props)
 
     this.state = {
-      pageCount: 2,
-      postsPerPage: this.props.postsPerPage || 6
+      pageCount: 1,
+      postsPerPage: this.props.postsPerPage || 20
     }
 
     this.appUnsub = app.subscribe(() => this.handleAppState())
   }
 
   private handleAppState(){
-    app.getPosts()
+    this.setState({
+      pageCount: app.getPosts().pageCount
+    })
   }
 
   componentDidMount(){

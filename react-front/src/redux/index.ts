@@ -1,10 +1,11 @@
 import { createStore } from "redux";
-import { TAGS, POSTS } from "./consts";
-import { tagsReducer, postsReducer } from "./reducers";
+import { TAGS, POSTS, POSTS_FILTER } from "./consts";
+import { tagsReducer, postsReducer, postsFilterReducer } from "./reducers";
 
 const initialState = function(){
   return {
     tags: [],
+    postsFilter: '',
     paginatedPosts: {
       dataArray: [],
       page: 1,
@@ -25,5 +26,7 @@ export default function AppReducer(state : any, action : any){
       return tagsReducer(state, action)
     case POSTS:
       return postsReducer(state, action)
+    case POSTS_FILTER:
+      return postsFilterReducer(state, action)
   }
 }

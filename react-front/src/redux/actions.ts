@@ -1,5 +1,5 @@
 import { AnyAction } from "redux";
-import { TAGS, POSTS } from "./consts";
+import { TAGS, POSTS, POSTS_FILTER } from "./consts";
 import { TagData, PostData, PaginatedData } from "../lib/types";
 
 export const tagsAction = function(tags : TagData[]) : AnyAction{
@@ -13,5 +13,12 @@ export const postsAction = function(posts : PaginatedData<PostData>) : AnyAction
   return {
     type: POSTS,
     paginatedPosts: posts
+  }
+}
+
+export const postsFilterAction = function(postsFilter : string) : AnyAction{
+  return {
+    type: POSTS_FILTER,
+    postsFilter
   }
 }

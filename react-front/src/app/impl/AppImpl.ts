@@ -2,7 +2,7 @@ import App from "../App";
 import { createStore } from "redux";
 import AppReducer from "../../redux";
 import { backendService } from "../../services";
-import { tagsAction, postsAction } from "../../redux/actions";
+import { tagsAction, postsAction, postsFilterAction } from "../../redux/actions";
 import { TagData, PostData, PaginatedData } from "../../lib/types";
 
 export default class AppImpl implements App{
@@ -25,8 +25,18 @@ export default class AppImpl implements App{
     return this.reduxStore.getState().tags
   }
 
+  setPostsFilter(filter : string){
+    this.reduxStore.dispatch(postsFilterAction(filter))
+  }
+
+  getPostsFilter() : string{
+    return this.reduxStore.getState().postsFilter
+  }
+
   async loadPosts(page: number, limit: number){
-    const paginatedPosts = await backendService.posts(page, limit)
+    const filter = this.getPostsFilter()
+
+    const paginatedPosts = await backendService.posts(filter, page, limit)
     this.reduxStore.dispatch(postsAction(paginatedPosts))
   }
 

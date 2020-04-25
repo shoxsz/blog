@@ -16,6 +16,10 @@ export type PostListProps = {
 
 export default class PostList extends React.Component<PostListProps>{
   render(){
+    if(!this.props.posts.length){
+      return this.renderEmpty()
+    }
+
     return (
       <Div width={ this.props.width || "100%"}>
         <Div
@@ -26,6 +30,18 @@ export default class PostList extends React.Component<PostListProps>{
         flexDirection={ this.getFlexDirection() }
         >
           { this.renderPostList() }
+        </Div>
+      </Div>
+    )
+  }
+
+  private renderEmpty(){
+    return (
+      <Div width={ this.props.width || "100%" } display="flex">
+        <Div className="post-list__empty" margin="auto" textAlign="center">
+          <i className="fa fa-search"></i>
+          <br/>
+          <span>Nenhum post encontrado :(</span>
         </Div>
       </Div>
     )

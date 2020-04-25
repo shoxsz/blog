@@ -4,6 +4,8 @@ export default interface App{
   loadTags() : void
   getTags() : TagData[]
 
+  setPostsFilter(filter : string) : void
+  getPostsFilter() : string
   loadPosts(page: number, limit: number) : void
   getPosts() : PaginatedData<PostData>
 

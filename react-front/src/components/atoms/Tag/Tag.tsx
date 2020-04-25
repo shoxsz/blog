@@ -6,6 +6,7 @@ import Div from '../Div/Div'
 
 export type TagProps = {
   tag: TagData
+  onClick?: (tag: TagData) => void
 }
 
 export default class Tag extends React.Component<TagProps>{
