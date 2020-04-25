@@ -12,7 +12,13 @@ export type TagProps = {
 export default class Tag extends React.Component<TagProps>{
   render(){
     return (
-      <Div className="tag">{ this.props.tag.title }</Div>
+      <Div onClick={ () => this.handleClick() } className="tag">{ this.props.tag.title }</Div>
     )
+  }
+
+  private handleClick(){
+    if(!!this.props.onClick){
+      this.props.onClick(this.props.tag)
+    }
   }
 }
