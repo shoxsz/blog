@@ -26,19 +26,21 @@ export default class Pagination extends React.Component<PaginationProps, Paginat
     return (
       <Div display="flex">
         <Div className="paginator" margin="auto" display="flex" alignItems="center">
-          <Div onClick={ () => this.handleLeftClick() } className="paginator__button paginator__left"><i className="fa fa-caret-left"></i></Div>
+          <Div onClick={ () => this.handleLeftClick() } className="paginator__button paginator__left"><i className="fa fa-caret-left"></i>Anterior</Div>
+          { this.renderNextButton(-1) }
           { this.renderNextButton(0) }
-          <Div onClick={ () => this.handleRightClick() } className="paginator__button paginator__right"><i className="fa fa-caret-right"></i></Div>
+          { this.renderNextButton(1) }
+          <Div onClick={ () => this.handleRightClick() } className="paginator__button paginator__right">Próximo<i className="fa fa-caret-right"></i></Div>
         </Div>
       </Div>
     )
   }
 
   private renderNextButton(offset : number){
-    if(this.state.page + offset < this.props.maxPages){
-      const page = this.state.page + offset
+    const page = this.state.page + offset
+    if(page >= 1 && page <= this.props.maxPages){
       return (
-        <Div onClick={ () => this.handlePageChange(page) } className={ `paginator__button paginator__next ${page == this.state.page ? 'paginator__page' : ''}` }>{ page }</Div>
+        <span onClick={ () => this.handlePageChange(page) } className={ `paginator__button paginator__next ${page == this.state.page ? 'paginator__page' : ''}` }>{ page }</span>
       )
     }
   }
