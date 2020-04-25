@@ -9,5 +9,8 @@ export default interface App{
   loadPosts(page: number, limit: number) : void
   getPosts() : PaginatedData<PostData>
 
+  loadPost(string: string) : void
+  getPost() : PostData
+
   subscribe(listener : () => void)
 }

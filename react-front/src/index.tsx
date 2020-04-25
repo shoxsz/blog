@@ -5,11 +5,22 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import IndexPage from './components/pages/IndexPage/IndexPage';
 import Header from './components/organisms/Header/Header';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import PostPage from './components/pages/PostPage/PostPage';
 
 ReactDOM.render(
   <React.StrictMode>
     <Header/>
-    <IndexPage />
+    <Router>
+      <Switch>
+        <Route path={ ["/posts/:slug"] } render={ (routeProps) => <PostPage slug={ routeProps.match.params.slug } /> }/>
+        <Route path={ ["/index", "/"] } component={ IndexPage } />
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

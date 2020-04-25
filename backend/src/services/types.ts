@@ -3,6 +3,8 @@ export type Tag = {
 }
 
 export type Post = {
+  id: string
+  slug: string
   title: string
   html: string
   createdAt: Date

@@ -1,4 +1,6 @@
 export type PostData = {
+  id: string
+  slug: string
   title: string
   html: string
   createdAt: Date

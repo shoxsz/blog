@@ -12,6 +12,13 @@ export const postsReducer = function(state : any, action : any){
   }
 }
 
+export const postReducer = function(state : any, action : any){
+  return {
+    ...state,
+    post: action.post
+  }
+}
+
 export const postsFilterReducer = function(state : any, action : any){
   return {
     ...state,

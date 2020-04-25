@@ -18,4 +18,14 @@ export default class BackendServiceImpl implements BackendService{
     })
     return result.data
   }
+
+  async loadPost(slug: string) : Promise<PostData>{
+    const result = await axios.get("http://localhost:3030/post", {
+      params: {
+        slug
+      }
+    })
+
+    return result.data
+  }
 }

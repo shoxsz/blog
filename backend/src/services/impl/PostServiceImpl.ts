@@ -25,7 +25,7 @@ export default class PostServiceImpl implements PostService{
     const result = await axios.get(getGhostUrl("content/posts/", queryParams))
 
     const data = result.data
-    const ghostPosts : GhostPost[] = data.posts
+    const ghostPosts : GhostPost[] = data.posts || []
 
     const postsArray = ghostPosts.map((post : GhostPost) => {
       return this.ghostPostToPost(post)
@@ -40,8 +40,23 @@ export default class PostServiceImpl implements PostService{
     }
   }
 
-  private ghostPostToPost(post : GhostPost){
+  async loadPost(slug : string) : Promise<Post | undefined>{
+    const result = await axios.get(getGhostUrl(`content/posts/slug/${slug}`, { include: 'authors,tags' }))
+    const data = result.data
+
+    const posts : GhostPost[] = data.posts || []
+    
+    if(!posts.length){
+      return undefined
+    }
+
+    return this.ghostPostToPost(posts[0])
+  }
+
+  private ghostPostToPost(post : GhostPost) : Post{
     return{
+      id: post.id,
+      slug: post.slug,
       title: post.title,
       createdAt: new Date(post.created_at),
       updatedAt: new Date(post.updated_at),
@@ -72,7 +87,9 @@ export default class PostServiceImpl implements PostService{
     const filterByPostSlug = `posts.slug:'${filter}'`
     const filterByTagName = `tags.name:'${filter}'`
     const filterByTagSlug = `tags.slug:'${filter}'`
+    const filterByAuthorSlug = `authors.slug:'${filter}'`
+    const filterByAuthorName = `authors.name:'${filter}'`
 
-    return `${filterByPostTitle},${filterByPostSlug},${filterByTagName},${filterByTagSlug}`
+    return `${filterByPostTitle},${filterByPostSlug},${filterByTagName},${filterByTagSlug},${filterByAuthorSlug},${filterByAuthorName}`
   }
 }
