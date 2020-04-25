@@ -8,6 +8,6 @@ export const tagsReducer = function(state : any, action : any){
 export const postsReducer = function(state : any, action : any){
   return {
     ...state,
-    posts: action.posts
+    paginatedPosts: action.paginatedPosts
   }
 }

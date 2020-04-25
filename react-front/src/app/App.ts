@@ -1,11 +1,11 @@
-import { TagData, PostData } from "../lib/types";
+import { TagData, PostData, PaginatedData } from "../lib/types";
 
 export default interface App{
   loadTags() : void
   getTags() : TagData[]
 
   loadPosts(page: number, limit: number) : void
-  getPosts() : PostData[]
+  getPosts() : PaginatedData<PostData>
 
   subscribe(listener : () => void)
 }

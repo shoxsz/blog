@@ -5,7 +5,13 @@ import { tagsReducer, postsReducer } from "./reducers";
 const initialState = function(){
   return {
     tags: [],
-    posts: []
+    paginatedPosts: {
+      dataArray: [],
+      page: 1,
+      itemsPerPage: 20,
+      pageCount: 1,
+      total: 0
+    }
   }
 }
 

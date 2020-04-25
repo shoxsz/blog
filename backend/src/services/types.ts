@@ -12,3 +12,11 @@ export type Post = {
   authors: string[]
   tags: string[]
 }
+
+export type PaginatedData<DataType> = {
+  dataArray: DataType[]
+  page: number
+  itemsPerPage: number
+  pageCount: number
+  total: number
+}

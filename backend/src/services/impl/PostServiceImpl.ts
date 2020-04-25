@@ -1,5 +1,5 @@
 import PostService from "../PostService";
-import { Tag, Post } from "../types";
+import { Tag, Post, PaginatedData } from "../types";
 
 import axios from "axios";
 import { GhostTag, GhostPost } from "./types";
@@ -19,7 +19,7 @@ export default class PostServiceImpl implements PostService{
     })
   }
 
-  async posts(page : number, limit : number) : Promise<Post[]>{
+  async posts(page : number, limit : number) : Promise<PaginatedData<Post>>{
     const result = await axios.get(getGhostUrl("content/posts/", {
       include: 'authors,tags',
       page,
@@ -27,9 +27,9 @@ export default class PostServiceImpl implements PostService{
     }))
 
     const data = result.data
+    const ghostPosts : GhostPost[] = data.posts
 
-    const posts : GhostPost[] = data.posts
-    return posts.map((post : GhostPost) => {
+    const postsArray = ghostPosts.map((post : GhostPost) => {
       return {
         title: post.title,
         createdAt: new Date(post.created_at),
@@ -41,5 +41,13 @@ export default class PostServiceImpl implements PostService{
         tags: post.tags.map(tag => tag.name),
       }
     })
+
+    return {
+      dataArray: postsArray,
+      itemsPerPage: data.meta.pagination.limit,
+      page: data.meta.pagination.page,
+      pageCount: data.meta.pagination.pages,
+      total: data.meta.pagination.total
+    }
   }
 }

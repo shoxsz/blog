@@ -1,5 +1,5 @@
 import BackendService from "../BackendService"
-import { TagData, PostData } from "../../lib/types"
+import { TagData, PostData, PaginatedData } from "../../lib/types"
 import axios from 'axios'
 
 export default class BackendServiceImpl implements BackendService{
@@ -8,7 +8,7 @@ export default class BackendServiceImpl implements BackendService{
     return result.data
   }
 
-  async posts(page : number, limit : number) : Promise<PostData[]>{
+  async posts(page : number, limit : number) : Promise<PaginatedData<PostData>>{
     const result = await axios.get("http://localhost:3030/posts", {
       params: {
         page,

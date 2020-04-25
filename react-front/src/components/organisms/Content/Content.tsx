@@ -19,10 +19,12 @@ export default class Content extends React.Component<ContentProps>{
       <Card className="content-card" margin="48px" padding="48px">
         <Div display="flex" width="100%" flexWrap="wrap">
           <Div className="content__left">
-            <PostsFeeder 
-            postListFactory={
-              (posts) => <PostList posts={ posts } horizontal />
-            }/>
+            <Div mb="32px">
+              <PostsFeeder 
+              postListFactory={
+                (posts) => <PostList posts={ posts } horizontal />
+              }/>
+            </Div>
             <PostsPagination/>
           </Div>
           <Div className="content__right">

@@ -3,7 +3,7 @@ import { createStore } from "redux";
 import AppReducer from "../../redux";
 import { backendService } from "../../services";
 import { tagsAction, postsAction } from "../../redux/actions";
-import { TagData, PostData } from "../../lib/types";
+import { TagData, PostData, PaginatedData } from "../../lib/types";
 
 export default class AppImpl implements App{
   reduxStore
@@ -26,12 +26,12 @@ export default class AppImpl implements App{
   }
 
   async loadPosts(page: number, limit: number){
-    const posts = await backendService.posts(page, limit)
-    this.reduxStore.dispatch(postsAction(posts))
+    const paginatedPosts = await backendService.posts(page, limit)
+    this.reduxStore.dispatch(postsAction(paginatedPosts))
   }
 
-  getPosts() : PostData[]{
-    return this.reduxStore.getState().posts
+  getPosts() : PaginatedData<PostData>{
+    return this.reduxStore.getState().paginatedPosts
   }
 
   subscribe(listener : () => void){

@@ -12,3 +12,11 @@ export type PostData = {
 export type TagData = {
   title: string
 }
+
+export type PaginatedData<DataType> = {
+  dataArray: DataType[]
+  page: number
+  itemsPerPage: number
+  pageCount: number
+  total: number
+}

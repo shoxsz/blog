@@ -1,6 +1,6 @@
-import { TagData, PostData } from "../lib/types";
+import { TagData, PostData, PaginatedData } from "../lib/types";
 
 export default interface BackendService{
   tags() : Promise<TagData[]>
-  posts(page : number, limit : number) : Promise<PostData[]>
+  posts(page : number, limit : number) : Promise<PaginatedData<PostData>>
 }
