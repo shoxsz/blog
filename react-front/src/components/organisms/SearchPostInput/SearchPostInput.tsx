@@ -20,6 +20,6 @@ export default class SearchPostInput extends React.Component<SearchPostInputProp
 
   private searchPosts(text : string){
     app.setPostsFilter(text)
-    app.loadPosts(1, 6)
+    app.loadPosts(1, 20)
   }
 }
