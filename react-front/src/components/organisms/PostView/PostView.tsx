@@ -7,10 +7,8 @@ import './PostView.sass'
 import './prism.css'
 import { Link } from 'react-router-dom'
 import TagsListing from '../TagsListing/TagsListing'
-import FacebookShareButton from '../../atoms/ShareButtons/FacebookShareButton'
-import TwitterShareButton from '../../atoms/ShareButtons/TwitterShareButton'
-import EmailShareButton from '../../atoms/ShareButtons/EmailShareButton'
 import ShareButtonGroup from '../../molecules/ShareButtonGroup/ShareButtonGroup'
+import Disqus from '../Disqus/Disqus'
 
 export type PostViewProps = {
   post: PostData
@@ -47,6 +45,7 @@ export default class PostView extends React.Component<PostViewProps>{
           </Div>
         </Div>
         { this.renderGoBackButton() }
+        <Disqus pageId={ this.props.post.id }/>
       </Div>
     )
   }

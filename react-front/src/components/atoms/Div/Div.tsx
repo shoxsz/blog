@@ -16,6 +16,7 @@ export type DivProps = React.CSSProperties & {
   onMouseEnter?: EventHandler<MouseEvent<HTMLDivElement>>
   onClick?: EventHandler<MouseEvent<HTMLDivElement>>
 
+  id?: string
   className?: string
 
   ref?: LegacyRef<HTMLDivElement>
@@ -24,6 +25,7 @@ export type DivProps = React.CSSProperties & {
 const Div : React.FunctionComponent<DivProps> = (props) => {
   return (
     <div
+      id={ props.id }
       ref={ props.ref }
       className={ props.className }
       style={
