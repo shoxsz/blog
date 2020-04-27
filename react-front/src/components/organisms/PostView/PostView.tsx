@@ -7,6 +7,10 @@ import './PostView.sass'
 import './prism.css'
 import { Link } from 'react-router-dom'
 import TagsListing from '../TagsListing/TagsListing'
+import FacebookShareButton from '../../atoms/ShareButtons/FacebookShareButton'
+import TwitterShareButton from '../../atoms/ShareButtons/TwitterShareButton'
+import EmailShareButton from '../../atoms/ShareButtons/EmailShareButton'
+import ShareButtonGroup from '../../molecules/ShareButtonGroup/ShareButtonGroup'
 
 export type PostViewProps = {
   post: PostData
@@ -32,13 +36,14 @@ export default class PostView extends React.Component<PostViewProps>{
         </Div>
         <Div className="post-content">
         </Div>
-        <Div className="post__bottom" display="flex" width="44%" flexWrap="wrap">
+        <Div mb="16px" className="post__bottom" display="flex" flexWrap="wrap">
           <Div>
             <Div className="post__tags_title">Tags</Div>
             <TagsListing tags={ this.props.post.tags.map(tag => ({ title: tag })) } onSelectTag={ (tag) => {} } />
           </Div>
           <Div ml="auto">
-            
+            <Div mb="4px" fontWeight="bold">Compartilhar</Div>
+            <ShareButtonGroup url="https://localhost.com"/>
           </Div>
         </Div>
         { this.renderGoBackButton() }

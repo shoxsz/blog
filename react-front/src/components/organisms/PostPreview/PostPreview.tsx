@@ -69,9 +69,9 @@ export default class PostPreview extends React.Component<PostPreviewProps, PostP
 
   private renderTags(){
     const tagsArray = this.props.preview.tags
-    return tagsArray.map(tag => {
+    return tagsArray.map((tag, index) => {
       return (
-        <span onClick={ () => this.handleTagClicked(tag) }>{ `${tag} ` }</span>
+        <span key={ index } onClick={ () => this.handleTagClicked(tag) }>{ `${tag} ` }</span>
       )
     })
   }
