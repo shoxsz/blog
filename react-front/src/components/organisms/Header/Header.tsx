@@ -18,7 +18,7 @@ export default class Header extends React.Component<HeaderProps>{
     return (
       <Div className="header" display="flex" alignItems="center" alignSelf="center">
         <Div mr="8px">
-          <CircularImage divColor="white" width="96px" height="96px" image="minotaur.png" />
+          <CircularImage divColor="white" width="96px" height="96px" image="/minotaur.png" />
         </Div>
         <Div color="#969595"><h1>Crack Tha Game Dev</h1></Div>
         <Div ml="auto" display="flex" alignItems="center">

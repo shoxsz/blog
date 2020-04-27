@@ -16,7 +16,8 @@ export default class BackendServiceImpl implements BackendService{
         filter
       }
     })
-    return result.data
+    
+    return this.convertPaginatedPosts(result.data)
   }
 
   async loadPost(slug: string) : Promise<PostData>{
@@ -26,6 +27,17 @@ export default class BackendServiceImpl implements BackendService{
       }
     })
 
-    return result.data
+    return this.convertPostDates(result.data)
+  }
+
+  private convertPaginatedPosts(paginatedPosts : PaginatedData<PostData>){
+    paginatedPosts.dataArray = paginatedPosts.dataArray.map(post => this.convertPostDates(post))
+    return paginatedPosts
+  }
+
+  private convertPostDates(post : PostData){
+    post.createdAt = new Date(post.createdAt)
+    post.updatedAt = new Date(post.updatedAt)
+    return post
   }
 }
