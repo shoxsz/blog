@@ -5,10 +5,16 @@ import Div from '../../atoms/Div/Div'
 import './PostView.css'
 import './PostView.sass'
 import './prism.css'
+
 import { Link } from 'react-router-dom'
 import TagsListing from '../TagsListing/TagsListing'
 import ShareButtonGroup from '../../molecules/ShareButtonGroup/ShareButtonGroup'
 import Disqus from '../Disqus/Disqus'
+import Prism from '../Prism/Prism'
+
+declare global {
+  interface Window { Prism : any }
+}
 
 export type PostViewProps = {
   post: PostData
@@ -18,7 +24,7 @@ export default class PostView extends React.Component<PostViewProps>{
   componentDidMount(){
     const postContent = document.getElementsByClassName("post-content")
     postContent[0].innerHTML += this.props.post.html
-    // Prism.highlightAll()
+    window.Prism.highlightAll()
   }
 
   render(){
@@ -46,6 +52,7 @@ export default class PostView extends React.Component<PostViewProps>{
         </Div>
         { this.renderGoBackButton() }
         <Disqus pageId={ this.props.post.id }/>
+        <Prism/>
       </Div>
     )
   }

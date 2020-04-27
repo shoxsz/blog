@@ -30,12 +30,12 @@ export default class ShareButtonGroup extends React.Component<ShareButtonGroupPr
   private renderButtons(){
     const buttons = this.props.buttons || AllShareButtons
 
-    return buttons.map(button => this.renderButton(button))
+    return buttons.map((button, index) => this.renderButton(button, index))
   }
 
-  private renderButton(buttonName : ShareButtonName){
+  private renderButton(buttonName : ShareButtonName, index: number | string){
     return (
-      <Div ml="4px">
+      <Div key={ index } ml="4px">
         { this.createButton(buttonName) }
       </Div>
     )
