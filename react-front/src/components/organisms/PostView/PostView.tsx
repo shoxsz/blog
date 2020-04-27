@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom'
 import TagsListing from '../TagsListing/TagsListing'
 import ShareButtonGroup from '../../molecules/ShareButtonGroup/ShareButtonGroup'
 import Disqus from '../Disqus/Disqus'
-import Prism from '../Prism/Prism'
 
 declare global {
   interface Window { Prism : any }
@@ -52,7 +51,6 @@ export default class PostView extends React.Component<PostViewProps>{
         </Div>
         { this.renderGoBackButton() }
         <Disqus pageId={ this.props.post.id }/>
-        <Prism/>
       </Div>
     )
   }
