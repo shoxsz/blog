@@ -61,7 +61,10 @@ export default class PostPreview extends React.Component<PostPreviewProps, PostP
           {/* <a href="#">Ler mais</a> */}
         </Div>
         <Div className="post-preview__data__postedBy">
-          Por <span onClick={ () => this.handleAuthorClicked() }>{ this.props.preview.authors[0] }</span>
+          <span>Por </span>
+          <span className="post-preview__data__author" onClick={ () => this.handleAuthorClicked() }>{ this.props.preview.authors[0] }</span> 
+          <span> em </span>
+          <span className="post-preview__data__update">{ this.props.preview.updatedAt.toDateString() }</span>
         </Div>
       </Div>
     )
