@@ -1,17 +1,22 @@
 import React from 'react'
 import Div from '../../atoms/Div/Div'
-import ContentLink from '../../molecules/ContentLink/ContentLink'
+import { Link } from 'react-router-dom'
+
+import './HeaderListItem.sass'
 
 export type HeaderItemListProps = {
   text: string
   link: string
+  openWindow?: boolean
 }
 
 export default class HeaderItemList extends React.Component<HeaderItemListProps>{
   render(){
     return (
       <Div className="header-labels">
-        <ContentLink link={ this.props.link }><h2>{ this.props.text }</h2></ContentLink>
+        <Link to={ this.props.link } target={ !!this.props.openWindow ? "_blank" : "_parent" }>
+          <h2>{ this.props.text }</h2>
+        </Link>
       </Div>
     )
   }

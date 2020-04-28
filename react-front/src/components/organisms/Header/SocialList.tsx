@@ -13,9 +13,9 @@ export default class SocialList extends React.Component<SocialListProps>{
     return (
       <Div display="flex" flexDirection={ this.getFlexDirection() } justifyContent="center">
         <Div mb={ this.getMarginBottom() } mr={ this.getMarginRight() }>
-          <IconLink icon="fa fa-instagram" color="white" fontSize={ this.getFontSize() } link="https://instagram.com" />
+          <IconLink icon="fa fa-instagram" color="white" fontSize={ this.getFontSize() } link="https://www.instagram.com/crackthagamedev" />
         </Div>
-        <IconLink icon="fa fa-github" color="white" fontSize={ this.getFontSize() } link="https://github.com" />
+        <IconLink icon="fa fa-github" color="white" fontSize={ this.getFontSize() } link="https://github.com/shoxsz" />
       </Div>
     )
   }
