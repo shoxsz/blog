@@ -1,15 +1,16 @@
 import BackendService from "../BackendService"
 import { TagData, PostData, PaginatedData } from "../../lib/types"
 import axios from 'axios'
+import { endpoint } from "./endpoint_config"
 
 export default class BackendServiceImpl implements BackendService{
   async tags() : Promise<TagData[]>{
-    const result = await axios.get("http://localhost:3030/tags")
+    const result = await axios.get(endpoint("tags"))
     return result.data
   }
 
   async posts(filter: string, page : number, limit : number) : Promise<PaginatedData<PostData>>{
-    const result = await axios.get("http://localhost:3030/posts", {
+    const result = await axios.get(endpoint("posts"), {
       params: {
         page,
         limit,
@@ -21,7 +22,7 @@ export default class BackendServiceImpl implements BackendService{
   }
 
   async loadPost(slug: string) : Promise<PostData>{
-    const result = await axios.get("http://localhost:3030/post", {
+    const result = await axios.get(endpoint("post"), {
       params: {
         slug
       }
