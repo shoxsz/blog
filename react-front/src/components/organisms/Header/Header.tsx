@@ -10,6 +10,7 @@ import SocialList from './SocialList'
 import MobileSwitch from '../MobileSwitch/MobileSwitch'
 import Toggable from '../Toggable/Toggable'
 import MobileMenu from './MobileMenu/MobileMenu'
+import { Link } from 'react-router-dom'
 
 export type HeaderProps = {
 
@@ -22,8 +23,8 @@ export default class Header extends React.Component<HeaderProps>{
         <Div mb="8px" display="flex">
           <CircularImage divColor="white" width="96px" height="96px" image="/minotaur.png" />
         </Div>
-        <Div ml="16px">
-          <h2 className="header__title">CRACK THA GAME DEV</h2>
+        <Div className="header__title" ml="16px">
+          <Link to="/"><h2>CRACK THA GAME DEV</h2></Link>
         </Div>
         <Div ml="auto">
           <MobileSwitch
