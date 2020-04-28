@@ -10,7 +10,7 @@ export type HeaderItemListProps = {
 export default class HeaderItemList extends React.Component<HeaderItemListProps>{
   render(){
     return (
-      <Div mr="16px" className="header-labels">
+      <Div className="header-labels">
         <ContentLink link={ this.props.link }><h2>{ this.props.text }</h2></ContentLink>
       </Div>
     )

@@ -46,7 +46,7 @@ export default class PostView extends React.Component<PostViewProps>{
           </Div>
           <Div ml="auto">
             <Div mb="4px" fontWeight="bold">Compartilhar</Div>
-            <ShareButtonGroup url="https://localhost.com"/>
+            <ShareButtonGroup/>
           </Div>
         </Div>
         { this.renderGoBackButton() }

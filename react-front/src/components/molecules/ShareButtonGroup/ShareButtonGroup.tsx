@@ -15,7 +15,7 @@ export const AllShareButtons : ShareButtonName[] = ["facebook", "twitter", "emai
 
 export type ShareButtonGroupProps = {
   buttons?: ShareButtonName[]
-  url: string
+  url?: string
 }
 
 export default class ShareButtonGroup extends React.Component<ShareButtonGroupProps>{
@@ -44,11 +44,15 @@ export default class ShareButtonGroup extends React.Component<ShareButtonGroupPr
   private createButton(buttonName : ShareButtonName){
     switch(buttonName){
       case "facebook":
-        return <FacebookShareButton url={ this.props.url } />
+        return <FacebookShareButton url={ this.getUrl() } />
       case "twitter":
-        return <TwitterShareButton url={ this.props.url } />
+        return <TwitterShareButton url={ this.getUrl() } />
       case "email":
-        return <EmailShareButton url={ this.props.url } />
+        return <EmailShareButton url={ this.getUrl() } />
     }
+  }
+
+  private getUrl(){
+    return this.props.url || window.location.href
   }
 }

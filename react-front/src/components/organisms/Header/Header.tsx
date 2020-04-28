@@ -8,6 +8,9 @@ import ContentLink from '../../molecules/ContentLink/ContentLink'
 import HeaderItemList from './HeaderListItem'
 import HeaderList from './HeaderList'
 import SocialList from './SocialList'
+import MobileSwitch from '../MobileSwitch/MobileSwitch'
+import Toggable from '../Toggable/Toggable'
+import MobileMenu from './MobileMenu/MobileMenu'
 
 export type HeaderProps = {
 
@@ -17,14 +20,24 @@ export default class Header extends React.Component<HeaderProps>{
   render(){
     return (
       <Div className="header" display="flex" alignItems="center" alignSelf="center">
-        <Div mr="8px">
+        <Div mb="8px" display="flex">
           <CircularImage divColor="white" width="96px" height="96px" image="/minotaur.png" />
         </Div>
-        <Div color="#969595"><h1>Crack Tha Game Dev</h1></Div>
-        <Div ml="auto" display="flex" alignItems="center">
-          <HeaderList/>
-          <SocialList/>
+        <Div ml="auto">
+          <MobileSwitch
+          content={
+            <Div display="flex" alignItems="center">
+              <HeaderList/>
+              <SocialList/>
+            </Div>
+          }
+          mobileContent={
+            <Toggable>
+              <MobileMenu/>
+            </Toggable>
+          }/>
         </Div>
+
       </Div>
     )
   }
