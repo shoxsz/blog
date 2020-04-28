@@ -9,6 +9,5 @@ const port = 3030
 
 app.use(cors())
 app.use(json())
-app.use(express.static(path.join(__dirname, '..', '..', 'react-front', 'build')))
 app.use(Router)
 app.listen(port, () => console.log(`Blog is online ${port}!`))

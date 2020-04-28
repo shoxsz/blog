@@ -1,6 +1,6 @@
 export const getEndPointURL = function(){
   if(process.env.NODE_ENV === "production"){
-    return "http://crackthagamedev-com.umbler.net"
+    return "http://159.203.88.127/backend"
   }
 
   return "http://localhost:3000"
