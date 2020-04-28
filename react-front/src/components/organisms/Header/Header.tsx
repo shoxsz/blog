@@ -22,6 +22,9 @@ export default class Header extends React.Component<HeaderProps>{
         <Div mb="8px" display="flex">
           <CircularImage divColor="white" width="96px" height="96px" image="/minotaur.png" />
         </Div>
+        <Div ml="16px">
+          <h2 className="header__title">CRACK THA GAME DEV</h2>
+        </Div>
         <Div ml="auto">
           <MobileSwitch
           content={
