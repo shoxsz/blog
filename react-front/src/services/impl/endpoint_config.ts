@@ -3,7 +3,7 @@ export const getEndPointURL = function(){
     return "http://159.203.88.127/backend"
   }
 
-  return "http://localhost:3000"
+  return "http://localhost:3030"
 }
 
 export const endpoint = function(params : string){
