@@ -59,7 +59,8 @@ export default class PostList extends React.Component<PostListProps>{
 
   private getPostPreviewWidth(){
     if(!!this.props.horizontal){
-      const itemsPerLine = this.props.itemsPerLine || 3
+      const desiredItemsPerLine = this.props.itemsPerLine || 3
+      const itemsPerLine = Math.min(desiredItemsPerLine, this.props.posts.length)
       return `${ 100 / itemsPerLine }%`
     }
 

@@ -25,7 +25,7 @@ export default class SearchInput extends React.Component<SearchInputProps, Searc
   render(){
     return (
       <Div className="search-input" display="flex" alignItems="flex-end">
-        <Div mr="4px">
+        <Div mr="4px" width="100%">
           <input type="text" onKeyDown={ (event) => this.handleKeyDown(event) } placeholder="Buscar post" onChange={ (event) => this.handleTextChange(event) }/>
         </Div>
         <button onClick={ () => this.handleSearch() }>

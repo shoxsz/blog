@@ -26,13 +26,33 @@ export default class Pagination extends React.Component<PaginationProps, Paginat
     return (
       <Div display="flex">
         <Div className="paginator" margin="auto" display="flex" alignItems="center">
-          <Div onClick={ () => this.handleLeftClick() } className="paginator__button paginator__left"><i className="fa fa-caret-left"></i>Anterior</Div>
+          { this.renderPageButton("left", "Anterior", () => this.handleLeftClick()) }
           { this.renderNextButton(-1) }
           { this.renderNextButton(0) }
           { this.renderNextButton(1) }
-          <Div onClick={ () => this.handleRightClick() } className="paginator__button paginator__right">Próximo<i className="fa fa-caret-right"></i></Div>
+          { this.renderPageButton("right", "Próximo", () => this.handleRightClick()) }
         </Div>
       </Div>
+    )
+  }
+
+  private renderPageButton(side : string, text : string, callback : () => void){
+    return (
+      <Div
+      onClick={ callback }
+      className={ `paginator__button paginator__${side}` }>
+        { side == "right" && this.renderPageButtonText(text) }
+        <i className={ `fa fa-caret-${side}` }></i>
+        { side == "left" && this.renderPageButtonText(text) }
+      </Div>
+    )
+  }
+
+  private renderPageButtonText(text : string){
+    return (
+      <span className="paginator__text_button">
+        { text }
+      </span>
     )
   }
 
