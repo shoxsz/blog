@@ -16,7 +16,7 @@ export type ContentProps = {
 export default class Content extends React.Component<ContentProps>{
   render(){
     return (
-      <Card className="content-card" margin="48px" padding="48px">
+      <Card className="content-card" margin="24px" padding="24px">
         <Div display="flex" width="100%" flexWrap="wrap">
           <Div className="content__left">
             <Div mb="32px">

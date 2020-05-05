@@ -40,8 +40,8 @@ export default class PostPreview extends React.Component<PostPreviewProps, PostP
 
   private renderPreviewImage(){
     return (
-      <Div onClick={ () => this.openPost() }>
-        <Card className="post-preview__image" borderRadius="0px" margin="4px" padding="0px">
+      <Div>
+        <Card onClick={ () => this.openPost() } className="post-preview__image" borderRadius="0px" margin="4px" padding="0px">
           <Div className="post-preview__image__place" backgroundImage={ `url(${this.props.preview.image})` }>
           </Div>
         </Card>

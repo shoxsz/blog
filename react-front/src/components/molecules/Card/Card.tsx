@@ -6,12 +6,15 @@ export type CardProps = {
   margin?: string
   padding?: string
   className?: string
+
+  onClick?: () => void
 }
 
 export default class Card extends React.Component<CardProps>{
   render(){
     return (
       <Div
+      onClick={ this.props.onClick }
       className={ this.getClassName() }
       margin={ this.props.margin }
       padding={ this.props.padding || "8px" }

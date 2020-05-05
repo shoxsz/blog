@@ -29,7 +29,7 @@ export default class Disqus extends React.Component<DisqusProps>{
 
   private createDisqusScript(){
     const script = document.createElement("script")
-    script.src = "https://localhost-3000-qulthbtzpa.disqus.com/embed.js"
+    script.src = "https://https-crackthagamedev-com.disqus.com/embed.js" //"https://localhost-3000-qulthbtzpa.disqus.com/embed.js"
     script.setAttribute("data-timestamp", new Date().toString());
     script.setAttribute("id", "disqus_script_unique");
     this.disqusScriptParent = document.head || document.body
