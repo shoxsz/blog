@@ -15,6 +15,7 @@ export default class CircularImage extends React.Component<CircularImageProps>{
   render(){
     return (
       <Div
+      width={ this.props.width } height={ this.props.height }
       className={ this.getImageClasses() }
       backgroundColor={ this.props.divColor }>
         <img width={ this.props.width } height={ this.props.height }  src={ this.props.image } />

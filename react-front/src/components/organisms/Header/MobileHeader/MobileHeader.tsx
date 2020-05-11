@@ -25,7 +25,7 @@ export default class MobileHeader extends React.Component<{}, MobileHeaderState>
       <Div className={ this.getClassNames() } alignSelf="center">
         <Div display="flex" alignItems="center">
           <Div mb="8px" display="flex">
-            <CircularImage divColor="white" width="96px" height="96px" image="/minotaur.png" />
+            <CircularImage divColor="white" width="96px" height="96px" image="/logo.png" />
           </Div>
           <Div className="header__title" ml="16px">
             <Link to="/"><h2>CRACK THA GAME DEV</h2></Link>
