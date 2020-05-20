@@ -17,7 +17,7 @@ export default class AboutPage extends React.Component<{}>{
           <img className="eu" src="/eu.jpg"/>
           <Div pl="48px" pr="48px">
             <p>
-              Meu nome é Paulo Márcio, nasci em 1995, atualmente trabalho como desenvolvedor freelancer, trabalho
+              Meu nome é Paulo Márcio, nasci em 1995, atualmente trabalho como desenvolvedor freelancer,
               principalmente com desenvolvimento de sistemas utilizando <b className="hoverable"><i>React</i></b> e <b className="hoverable"><i>NodejS</i></b>.
             </p>
             <p>
@@ -26,7 +26,7 @@ export default class AboutPage extends React.Component<{}>{
             </p>
             <p>
               Criei esse blog para que eu possa dedicar mais tempo ao desenvolvimento de jogos, essa sempre foi uma área 
-              do meu interesse e foi o principal motivo pra eu começar a programar. Atualmente tenho
+              do meu interesse e foi o principal motivo para eu começar a programar. Atualmente tenho
               um jogo lançado na <a href="https://play.google.com/store/apps/developer?id=Crack+It+Games" target="__blank" className="about-link"><b>Google Play Store</b></a>.
             </p>
 
@@ -37,13 +37,13 @@ export default class AboutPage extends React.Component<{}>{
 
               <Div>
                 <p>
-                  Quando eu criei esse jogo eu me inspirei no pacman, mas queria fazer algo mais
-                  frenético, um jogo mais rápido, lançei ele na play store pra saber como era a experiência de publicar
+                  Quando criei esse jogo eu me inspirei no pacman, mas queria fazer algo mais
+                  frenético, um jogo mais rápido, lançei ele na play store para saber como era a experiência de publicar
                   um jogo, ver as pessoas jogando e comentando sobre ele, foi uma boa experência ver amigos e familiares jogando.
                 </p>
                 <p>
                   Desde então não criei mais jogos pois me dediquei a trabalhar como freelancer, inicialmente desenvolvendo scrapers em python,
-                  depois peguei uns trabalhos com <b className="hoverable"><i>React</i></b> e <b className="hoverable"><i>NodejS</i></b>, atualmente eu trabalho com essa stack.
+                  depois peguei alguns trabalhos com <b className="hoverable"><i>React</i></b> e <b className="hoverable"><i>NodejS</i></b>, atualmente eu trabalho com essa stack.
                 </p>
               </Div>
             </Div>
