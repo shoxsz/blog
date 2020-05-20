@@ -3,10 +3,14 @@ import Card from '../molecules/Card/Card'
 
 import './ContentTemplate.sass'
 
-export default class ContentTemplate extends React.Component<{}>{
+export type ContentTemplateProps = {
+  background?: string
+}
+
+export default class ContentTemplate extends React.Component<ContentTemplateProps>{
   render(){
     return (
-      <Card className="content-card">
+      <Card className="content-card" background={ this.props.background }>
         { this.props.children }
       </Card>
     )
