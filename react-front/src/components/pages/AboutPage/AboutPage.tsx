@@ -12,10 +12,10 @@ export default class AboutPage extends React.Component<{}>{
       <>
       <Header/>
       <ContentTemplate background="#e9eeff">
-        <Div padding="28px" display="flex" justifyContent="center" alignItems="center" flexDirection="column">
+        <Div className="about-content" display="flex" justifyContent="center" alignItems="center" flexDirection="column">
           <h2>Sobre</h2>
           <img className="eu" src="/eu.jpg"/>
-          <Div pl="48px" pr="48px">
+          <Div>
             <p>
               Meu nome é Paulo Márcio, nasci em 1995, atualmente trabalho como desenvolvedor freelancer,
               principalmente com desenvolvimento de sistemas utilizando <b className="hoverable"><i>React</i></b> e <b className="hoverable"><i>NodejS</i></b>.
@@ -31,22 +31,16 @@ export default class AboutPage extends React.Component<{}>{
             </p>
 
             <h4 className="dimension-m-title">Dimension M</h4>
-
-            <Div display="flex">
+            <p>
               <img src="https://lh3.googleusercontent.com/QiqMPG8sEBNYWP67ilDjwnrju8_mGmwEkSzhhO5bp0PKEWzEoTVAOHO0GFiKEHB6_1o=s180-rw" className="dimension-m"/>
-
-              <Div>
-                <p>
-                  Quando criei esse jogo eu me inspirei no pacman, mas queria fazer algo mais
-                  frenético, um jogo mais rápido, lançei ele na play store para saber como era a experiência de publicar
-                  um jogo, ver as pessoas jogando e comentando sobre ele, foi uma boa experência ver amigos e familiares jogando.
-                </p>
-                <p>
-                  Desde então não criei mais jogos pois me dediquei a trabalhar como freelancer, inicialmente desenvolvendo scrapers em python,
-                  depois peguei alguns trabalhos com <b className="hoverable"><i>React</i></b> e <b className="hoverable"><i>NodejS</i></b>, atualmente eu trabalho com essa stack.
-                </p>
-              </Div>
-            </Div>
+              Quando criei esse jogo eu me inspirei no pacman, mas queria fazer algo mais
+              frenético, um jogo mais rápido, lançei ele na play store para saber como era a experiência de publicar
+              um jogo, ver as pessoas jogando e comentando sobre ele, foi uma boa experência ver amigos e familiares jogando.
+            </p>
+            <p>
+              Desde então não criei mais jogos pois me dediquei a trabalhar como freelancer, inicialmente desenvolvendo scrapers em python,
+              depois peguei alguns trabalhos com <b className="hoverable"><i>React</i></b> e <b className="hoverable"><i>NodejS</i></b>, atualmente eu trabalho com essa stack.
+            </p>
             <Div mt="22px">
               <SocialLinkList/>
             </Div>
