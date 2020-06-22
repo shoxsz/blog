@@ -15,6 +15,9 @@ const SocialLinkList : React.FunctionComponent<{}> = function(props){
         <li>
           <IconLink fontSize="24px" link="https://github.com/shoxsz" icon="fa fa-github" label="Github"/>
         </li>
+        <li>
+          <IconLink fontSize="24px" link="https://play.google.com/store/apps/developer?id=Crack+It+Games" icon="fa fa-play" label="Play Store"/>
+        </li>
       </ul>
     </Div>
   )
