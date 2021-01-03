@@ -1,4 +1,5 @@
 import React from 'react'
+import HotmartButton from '../../molecules/HotmartButton/HotmartButton'
 import Header from '../../organisms/Header/Header'
 import ContentTemplate from '../../templates/ContentTemplate'
 
@@ -51,7 +52,7 @@ const EbookPage = function({}){
 
         <h2 className="ebook-button-text">Se este ebook te interessa clique no botão para compra-lo!</h2>
         <h4 className="ebook-button-text">Você tem até 7 dias para devolução</h4>
-        <a onClick={ () => false } href="https://pay.hotmart.com/P45286896T?checkoutMode=1" className="hotmart-fb hotmart__button-checkout">Comprar Agora</a> 
+        <HotmartButton link="https://pay.hotmart.com/P45286896T?checkoutMode=10&bid=1609697548141" text="Comprar Agora" />
 
       </div>
     </>

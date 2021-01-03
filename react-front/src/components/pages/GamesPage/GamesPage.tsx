@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../organisms/Header/Header'
 import ContentTemplate from '../../templates/ContentTemplate'
 import Div from '../../atoms/Div/Div'
+import HotmartButton from '../../molecules/HotmartButton/HotmartButton'
 
 const GamesPage = function({}){
   return (
@@ -21,7 +22,7 @@ const GamesPage = function({}){
             />
           </Div>
           <Div>
-            <a onClick={ () => false } href="https://pay.hotmart.com/E45287330F?checkoutMode=1" className="hotmart-fb hotmart__button-checkout">Comprar na Hotmart</a> 
+            <HotmartButton link={ `https://pay.hotmart.com/E45287330F?checkoutMode=1` } text="Comprar na Hotmart"/>
           </Div>
         </Div>
       </ContentTemplate>

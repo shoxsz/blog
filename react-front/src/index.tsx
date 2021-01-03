@@ -14,6 +14,11 @@ import PostPage from './components/pages/PostPage/PostPage';
 import AboutPage from './components/pages/AboutPage/AboutPage';
 import GamesPage from './components/pages/GamesPage/GamesPage';
 import EbookPage from './components/pages/Ebook/EbookPage';
+import { config } from "dotenv";
+
+config();
+
+console.log(process.env.HOTMART_EBOOK);
 
 ReactDOM.render(
   <React.StrictMode>
