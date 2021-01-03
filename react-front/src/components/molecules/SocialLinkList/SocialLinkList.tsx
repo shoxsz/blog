@@ -10,7 +10,13 @@ const SocialLinkList : React.FunctionComponent<{}> = function(props){
       <h3>Redes sociais</h3>
       <ul>
         <li>
-          <IconLink fontSize="24px" link="https://instagram.com/crackthagamedev" icon="fa fa-instagram" label="Instagram"/>
+          <IconLink fontSize="24px" link="/ebook" icon="fa fa-book" label="Ebook"/>
+        </li>
+        <li>
+          <IconLink fontSize="24px" link="/games" icon="fa fa-gamepad" label="Games"/>
+        </li>
+        <li>
+          <IconLink fontSize="24px" link="https://instagram.com/crackitgames" icon="fa fa-instagram" label="Instagram"/>
         </li>
         <li>
           <IconLink fontSize="24px" link="https://github.com/shoxsz" icon="fa fa-github" label="Github"/>

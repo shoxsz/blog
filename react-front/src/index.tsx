@@ -12,11 +12,15 @@ import {
 } from "react-router-dom";
 import PostPage from './components/pages/PostPage/PostPage';
 import AboutPage from './components/pages/AboutPage/AboutPage';
+import GamesPage from './components/pages/GamesPage/GamesPage';
+import EbookPage from './components/pages/Ebook/EbookPage';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
+        <Route path={ ["/ebook"] } component={ EbookPage } />
+        <Route path={ ["/games"] } component={ GamesPage } />
         <Route path={ ["/about"] } component={ AboutPage } />
         <Route path={ ["/posts/:slug"] } render={ (routeProps) => <PostPage slug={ routeProps.match.params.slug } /> }/>
         <Route path={ ["/index", "/"] } component={ IndexPage } />
