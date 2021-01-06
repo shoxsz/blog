@@ -17,7 +17,7 @@
     "@types/react-router-dom": "^5.1.4",
     "@types/react-share": "^3.0.3",
     "@types/redux": "^3.6.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "node-sass": "^4.14.0",
     "prismjs": "^1.20.0",
