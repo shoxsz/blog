@@ -21,7 +21,7 @@ export default class PostList extends React.Component<PostListProps>{
     }
 
     return (
-      <Div width={ this.props.width || "100%"}>
+      <Div width={ this.props.width || "100%" }>
         <Div
         className={ this.props.className }
         width="100%"

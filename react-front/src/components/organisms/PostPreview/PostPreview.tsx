@@ -27,7 +27,7 @@ export default class PostPreview extends React.Component<PostPreviewProps, PostP
 
   render(){
     if(this.state.openPost){
-      return <Redirect to={ `/posts/${this.props.preview.slug}` } />
+      return <Redirect to={ `/posts/${this.props.preview.slug}` } push={ true } />
     }
 
     return (

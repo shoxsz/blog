@@ -4,7 +4,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import IndexPage from './components/pages/IndexPage/IndexPage';
-import Header from './components/organisms/Header/Header';
 import {
   BrowserRouter as Router,
   Switch,

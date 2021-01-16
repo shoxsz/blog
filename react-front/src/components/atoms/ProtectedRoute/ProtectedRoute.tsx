@@ -35,7 +35,7 @@ export default class ProtectedRoute extends React.Component<ProtectedRouteProps>
 
   private renderRedirect(){
     return (
-      <Redirect to={ this.props.failureRedirect } />
+      <Redirect to={ this.props.failureRedirect } push={ true } />
     )
   }
 }
