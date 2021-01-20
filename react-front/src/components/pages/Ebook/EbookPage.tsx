@@ -107,11 +107,18 @@ const EbookPage = function(props){
           <h1>O que você também pode fazer</h1>
 
           <Div className="ebook-iframe">
+            <h3>Clone do Flappy Bird</h3>
             <iframe src="https://giphy.com/embed/U3QYVH7oCOcncFARmQ" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
           </Div>
 
           <Div className="ebook-iframe">
+            <h3>Dimension M - Jogo para Android</h3>
             <iframe src="https://www.youtube.com/embed/vQe_VKpuW-I" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </Div>
+
+          <Div className="ebook-iframe">
+            <h3>Modelo 3D animado</h3>
+            <img src="3dmodel.png"/>
           </Div>
 
         </Div>
