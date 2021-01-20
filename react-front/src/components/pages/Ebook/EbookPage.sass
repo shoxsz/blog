@@ -1,54 +1,160 @@
-.ebook-content
-  background: #343434
-  padding-left: 30%
-  padding-right: 30%
-  padding-top: 32px
-  padding-bottom: 32px
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
 
-  .ebook-cover
-    border-radius: 5%
-    width: 30%
-    box-shadow: 2px 2px 5px
+.ebook-content
+  padding-left: 96px
+  padding-right: 96px
 
   .ebook-title
-    color: white
-    font-size: 64px
+    font-size: 60px
+    font-family: 'Bowlby One SC'
+    color:#00b0f2
+    text-align: center
+    span
+      text-shadow: 5px 5px #000000cc
+
+  .ebook-call
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: auto
+    margin-top: 8px
+
+    .ebook-call-list
+      margin-right: 8px
+      text-align: right
+      width: 50%
+      font-size: 20px
+      font-family: 'Bowlby One SC'
+      .ebook-list
+        color: #00b0f2
+        padding: 0px
+        list-style: none
+        li
+          font-weight: lighter
+          margin-bottom: 4px
+
+    .ebook-cover
+      margin-left: 8px
+      width: 50%
+
+      img
+        border-radius: 5%
+        width: 20%
+        box-shadow: 2px 2px 5px
 
   .ebook-text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 50%
+    margin: auto
     margin-top: 8px
-    padding: 8px
-    border-radius: 5px
-    background: #5586a4
-  
-  p
-    color: white
-    font-weight: bolder
-    font-size: 16px
-    font-family: Lato, sans-serif
-    margin: 32px
 
-  .ebook-button-text
-    color: white
+    .ebook-button
+      width: 50%
 
-  a
-    color: black
-    text-decoration: none
-    &:hover
-      text-transform: uppercase
+  .ebook-games-list
+    list-style: none
+    li:first-child
+      margin-bottom: 32px
+    img
+      width: 32px
+      margin-right: 8px
+    a
+      font-family: 'Bowlby One SC'
+      text-decoration: none
+      color: black
+
+
+  .ebook-sub-title
+    font-size: 30px
+    font-family: 'Bowlby One SC'
+    color:black
+    text-align: center
+
+  .ebook-card
+    padding: 24px
+
+  .ebook-title-imgs
+    margin: auto
+    justify-content: center
+    .ebook-title-imgs-ogl
+      width: 150px
+      margin-right: 32px
+    .ebook-title-imgs-cpp
+      width: 75px
+
+  .ebook-iframe
+    display: flex
+    margin-top: 20px
+    width: 100%
+    max-width: 560px
+    max-height: 315px
+
+    iframe
+      width: 100%
+      height: 315px
 
 @media screen and ( max-width: 1300px )
   .ebook-content
-    padding-left: 10%
-    padding-right: 10%
-    padding-top: 8px
-    padding-bottom: 8px
+    padding-left: 20px
+    padding-right: 20px
+
+    .ebook-text
+      width: 80%
 
 @media screen and ( max-width: 768px )
   .ebook-content
-    padding-left: 1%
-    padding-right: 1%
-    padding-top: 2px
-    padding-bottom: 2px
+    padding-left: 2px
+    padding-right: 2px
+
+    
+    .ebook-title
+      font-size: 30px
+      font-family: 'Bowlby One SC'
+      color:#00b0f2
+      text-align: center
+      span
+        text-shadow: 5px 5px #000000cc
   
+    .ebook-call
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      margin: auto
+      margin-top: 8px
+
+      .ebook-call-list
+        margin-right: 8px
+        text-align: center
+        width: 100%
+
+      .ebook-cover
+        margin-left: 8px
+        width: 100%
+        text-align: center
+        img
+          border-radius: 5%
+          width: 40%
+          box-shadow: 2px 2px 5px
+
+    .ebook-text
+      width: 100%
+      .ebook-card
+        padding: 2px
+      .ebook-button
+        width: 100%
+
     p
       margin: 4px
+
+    .ebook-iframe
+      display: flex
+      margin-top: 20px
+      width: 100%
+      max-width: 280px
+      max-height: 157px
+      iframe
+        width: 100%
+        height: 157px
