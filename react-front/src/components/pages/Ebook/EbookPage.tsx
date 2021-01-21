@@ -32,7 +32,7 @@ const EbookPage = function(props){
             </p>
 
             <p>Este ebook vai te ensinar OpenGL moderna sem enrolação, direto ao ponto, <span className="ebook-text-highlight">você vai aprender renderização de formas geométricas, programação de shaders, texturas, transformações, projeções,
-            renderização 2D e 3D e mais!</span> Este ebook ainda disponibiliza diversos projetos que você pode usar para acompanha-lo e entender mais como usar o conhecimento adquirido para programar um jogo de verdade.
+            renderização 2D e 3D e mais!</span> Este ebook ainda disponibiliza diversos projetos que você possa praticar e acompanhar.
             </p>
 
             <p>Depois de ler e aprender com este ebook você vai estar capacitado para programar jogos 2D e até 3D, <span className="ebook-text-highlight">ele vai te
