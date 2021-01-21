@@ -22,87 +22,54 @@ const EbookPage = function(props){
           <Div><img className="ebook-title-imgs-cpp" src="cpp.svg"/></Div>
         </Div>
 
-        <Div className="ebook-call">
-          <Div className="ebook-call-list">
-            <h3>Aprenda OpenGL</h3>
-            <ul className="ebook-list">
-              <li>Programação 2D</li>
-              <li>Programação 3D</li>
-              <li>Programação de Shaders</li>
-              <li>Transformações e projeções</li>
-              <li>Vários projetos para praticar</li>
-            </ul>
-          </Div>
-          <Div className="ebook-cover">
-            <img src="cover.png"/>
-          </Div>
-        </Div>
-
         <Div className="ebook-text">
           <Card className="ebook-card">
-            <Div className="ebook-sub-title">
-              <span>Aprenda a programar em OpenGL e C++ e crie os seus próprios jogos</span>
-            </Div>
 
-            <p>
-              <span style={ { fontFamily: "Bowlby One SC", marginRight: "4px" } }>Sobre o ebook:</span> Se você é um programador e tem interesse em OpenGL, deseja criar seus próprios jogos ou aplicações gráficas, mas nunca teve tempo, ou sempre achou tudo muito complicado,
-              <span style={{ color: "#FF7F50", fontWeight: "bolder" }}> este ebook vai te ensinar de forma prática e rápida como usar as funções da OpenGL para programar aplicações 2D e 3D.</span>
+            <Div display="flex"><img width="64" src="bs.png"/></Div>
+            
+            <p>Você é programador e quer aprender a usar OpenGL, uma das API's gráficas mais usadas na indústria dos games, <span className="ebook-text-highlight">quer criar os seus próprios jogos do absoluto zero mas não sabe por onde começar</span>,
+            pesquisa na internet e não acha nenhum tutorial que te ensine de verdade.
             </p>
 
-            <p>
-              Este ebook te ensina de forma prática e direta como criar aplicações gráficas com OpenGL e C++,
-              aprender OpenGL pode ser muito desafiador, ela exige muito conhecimento teórico sobre computação gráfica, matemática e até mesmo a API tem uma complexidade elevada. <span style={{ color: "#FF7F50", fontWeight: "bolder" }}>Neste ebook você vai aprender
-              a programar em OpenGL de forma prática e direta, sem muita enrolação, ele é acompanhado de diversos projetos para cada capítulo, além do projeto de um jogo 2D que pode servir como exemplo
-              de como colocar em prática o que você está aprendendo.</span>
+            <p>Este ebook vai te ensinar OpenGL moderna sem enrolação, direto ao ponto, <span className="ebook-text-highlight">você vai aprender renderização de formas geométricas, programação de shaders, texturas, transformações, projeções,
+            renderização 2D e 3D e mais!</span> Este ebook ainda disponibiliza diversos projetos que você pode usar para acompanha-lo e entender mais como usar o conhecimento adquirido para programar um jogo de verdade.
+            </p>
+
+            <p>Depois de ler e aprender com este ebook você vai estar capacitado para programar jogos 2D e até 3D, <span className="ebook-text-highlight">ele vai te
+            dar o ponta pé inicial que você precisa para se tornar um programador de jogos melhor.</span>
             </p>
             
-            <p>
-              <span style={ { fontFamily: "Bowlby One SC", marginRight: "4px" } }>OpenGL</span> é uma das API's gráficas mais famosas da indústria, ela é usada para criação de diversos tipos de programa: Jogos, Modelagem 3D, CAD, etc. além disso, OpenGL
-              pode ser usada para criação de jogos em diversas plataformas: desktop, mobile e até web! se você almeja criar jogos ou game engines, OpenGL é quase um requisito.
-            </p>
-
-            <p>
-            <span style={ { fontFamily: "Bowlby One SC", marginRight: "4px" } }>Por que C++?</span> É possível aprender OpenGL em diversas linguagens, Java, javascript, C, etc. O ebook te ensina OpenGL usando C++, ela é uma das linguagens mais utilizadas na criação de jogos em todo o mundo, principalmente para jogos grandes como GTA5, Dota, CSGO, League of Legends, etc.
-              é uma linguagem muito flexível, extremamente rápida e permite a programação em diversos paradigmas.
-            </p>
-
-            
-            <Div mt="40px">
-              <span style={ { fontFamily: "Bowlby One SC", marginRight: "4px" } }>Sobre o autor:</span>
-              Programo desde os 15 anos, curto criar jogos em C++/Java com OpenGL, criei esse blog com o intuito de ensinar um pouco do que sei e de mostrar
-              os projetos nos quais tenho trabalhado, aqui já criei tutoriais ensinando programação 2D e 3D, também tenho dois jogos lançados da play store:
-            </Div>
-
-            <ul className="ebook-games-list">
-              <li>
-                <a href="https://play.google.com/store/apps/details?id=paulo.games.lolmaze" target="_blank">
-                  <Div display="flex" alignItems="center">
-                    <img src="/dimm.png" />
-                    Dimension M
-                  </Div>
-                </a>
-              </li>
-              
-              <li>
-                <a href="https://play.google.com/store/apps/details?id=com.games.crackit" target="_blank">
-                  <Div display="flex">
-                    <img src="/maget.png" />
-                    Mage Tap
-                  </Div>
-                </a>
-              </li>
-            </ul>
+            <Div display="flex" justifyContent="flex-end"><img width="64" src="ek.png"/></Div>
 
           </Card>
 
-          <h2 className="ebook-button-text">Se este ebook te interessa clique no botão para compra-lo!</h2>
+          <Div className="ebook-call">
+            <Div className="ebook-call-list">
+              <h3>Aprenda OpenGL</h3>
+              <ul className="ebook-list">
+                <li>Programação 2D</li>
+                <li>Programação 3D</li>
+                <li>Programação de Shaders</li>
+                <li>Transformações e projeções</li>
+                <li>Vários projetos para praticar</li>
+              </ul>
+            </Div>
+            <Div className="ebook-cover">
+              <img src="cover.png"/>
+            </Div>
+          </Div>
+
+          <h2 className="ebook-button-text">Clique no botão e compre agora!</h2>
+          <h2 className="ebook-button-text ebook-offer">de <span className="ebook-price">R$40</span> por apenas R$27!</h2>
           <h4 className="ebook-button-text">Você tem até 7 dias para devolução</h4>
           <Div className="ebook-button">
             <HotmartButton link="https://pay.hotmart.com/P45286896T?checkoutMode=10&bid=1609697548141" text="Comprar Agora" />
           </Div>
+
+          <Div width="100%" height="1px" backgroundColor="black" mt="16px" mb="16px"/>
         </Div>
 
-        <Div display="flex" alignItems="center" flexDirection="column">
+        <Div className="ebook-examples">
 
           <h1>O que você também pode fazer</h1>
 
