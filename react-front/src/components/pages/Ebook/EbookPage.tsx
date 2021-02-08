@@ -27,18 +27,45 @@ const EbookPage = function(props){
 
             <Div display="flex"><img width="64" src="bs.png"/></Div>
             
-            <p>Você é programador e quer aprender a usar OpenGL, uma das API's gráficas mais usadas na indústria dos games, <span className="ebook-text-highlight">quer criar os seus próprios jogos do absoluto zero mas não sabe por onde começar</span>,
-            pesquisa na internet e não acha nenhum tutorial que te ensine de verdade.
+            <p>
+            <span className="ebook-text-highlight">Você é programador e que aprender OpenGL?</span> Este eBook reúne o conhecimento necessário para te ensinar a programar em OpenGL, ele 
+              te ensina de forma prática e rápida como programar em OpenGL para renderizar imagens 2D e 3D.
             </p>
 
-            <p>Este ebook vai te ensinar OpenGL moderna sem enrolação, direto ao ponto, <span className="ebook-text-highlight">você vai aprender renderização de formas geométricas, programação de shaders, texturas, transformações, projeções,
-            renderização 2D e 3D e mais!</span> Este ebook ainda disponibiliza diversos projetos que você possa praticar e acompanhar.
-            </p>
-
-            <p>Depois de ler e aprender com este ebook você vai estar capacitado para programar jogos 2D e até 3D, <span className="ebook-text-highlight">ele vai te
-            dar o ponta pé inicial que você precisa para se tornar um programador de jogos melhor.</span>
+            <p>
+            <span className="ebook-text-highlight">O que este eBook é:</span> Uma série de projetos práticos para você usar e aprender, o eBook vai dissecar cada projeto e explicar o que cada função faz e para que você deve usa-la.
+              Cada projeto te ensina um tópico importante da OpenGL, ao final do livro você será capaz de programar aplicações OpenGL sozinho, pois terá um conhecimento muito mais amplo da API.
             </p>
             
+            <p>
+              Para quem está começando, este pode ser um conteúdo difícil de encontrar, e quando encontramos é difícil de entender, a maioria dos tutoriais ensinam apenas funções antigas da OpenGL,
+              que não são mais usadas mais hoje em dia, além de serem limitados em conteúdo. Este eBook é guia completo para te tirar do zero e te colocar no lugar de um programador OpenGL.
+            </p>
+
+            <p>
+            <span className="ebook-text-highlight">O que este eBook não é:</span> Este eBook não vai te transformar num mestre jedi da programação de jogos, ele não te ensina a criar games AAA, nem mesmo jogos 2D <span className="ebook-highlight-dark">(leia o Bonus!)</span>, porém, ele vai te dar o pontapé inicial que
+            você precisa para iniciar sua carreira, seja para criar suas próprias game engines ou para criar seus games do zero.
+            </p>
+
+            <p>
+              <span className="ebook-text-highlight">O que você vai aprender:</span> Em cada capítulo o livro ensina um tópico importante da OpenGL.
+              <ul className="ebook-chapters">
+                <li><span>No primeiro capítulo: </span>Você vai aprender famoso Hello World, você vai aprender a criar uma simples aplicação OpenGL com uma janela colorida!</li>
+                <li><span>No segundo capítulo: </span>Você vai aprender a renderizar um simples triângulo na tela, este capítulo está recheado de informações importantes! como programar e criar um shader, como usar a memória de vídeo para carregar dados de geometria, como invocar um shader para renderização, o que são arrays de vértices, layout de vértice, etc.</li>
+                <li><span>No terceiro capítulo: </span>Você vai aprender uma técnica de renderização utilizando índices, essa técnica evita o consumo exagerado de memória e evita a repetição de vértices de um modelo 2D/3D.</li>
+                <li><span>No quarto e quinto capítulos: </span>Você vai aprender a aplicar texturas nas formas geométricas, e como lidar com texturas dentro dos shaders, também verá como utilizar múltiplas texturas e aplicar blend nelas!</li>
+                <li><span>No sexto capítulo: </span>Você vai aprender a criar e aplicar transformações geométricas e como aplica-las no vertex shader.</li>
+                <li><span>No sétimo capítulo: </span>Você vai aprender a criar e aplicar projeções em perspectiva, este tipo de projeção torna nossas aplicações 3D mais realistas! também verá como aplica-las dentro d vertex shader.</li>
+                <li><span>No oitavo e último capítulo: </span>Você vai aprender a técnica de instancing, para renderizar o mesmo modelo 3D diversas vezes, mudando suas propriedades, essa técnica é importante pois pode melhorar, e muito,
+              o desempenho de uma aplicação 3D.</li>
+              </ul>
+            </p>
+
+            <p>
+            <span className="ebook-text-highlight">Bonus:</span> <span className="ebook-highlight-dark">Um eBook extra!</span> isso mesmo! este eBook vem acompanhado de uma série de projetos, dentre eles o projeto de um game 2D! este projeto te ensina como criar e estruturar o código de um jogo, usando OpenGL e C++, o eBook extra vai te ensinar a criar este game!
+            os conceitos por trás de cada módulo e as técnicas utilizadas para renderização de games 2D, nele você vai aprender como criar um Sprite Batch, um renderizador de fontes 2D, e mais! Para você adquirir este eBook extra basta me enviar um email com um pedido, uma semana após adquirir o eBook desta página!
+            </p>
+
             <Div display="flex" justifyContent="flex-end"><img width="64" src="ek.png"/></Div>
 
           </Card>
@@ -59,11 +86,10 @@ const EbookPage = function(props){
             </Div>
           </Div>
 
-          <h2 className="ebook-button-text">Clique no botão e compre agora!</h2>
           <h2 className="ebook-button-text ebook-offer">de <span className="ebook-price">R$40</span> por apenas R$27!</h2>
           <h4 className="ebook-button-text">Você tem até 7 dias para devolução</h4>
           <Div className="ebook-button">
-            <HotmartButton link="https://pay.hotmart.com/P45286896T?checkoutMode=10&bid=1609697548141" text="Comprar Agora" />
+            <HotmartButton link="https://pay.hotmart.com/P45286896T?checkoutMode=10&bid=1609697548141" text="Acesse Agora" />
           </Div>
 
           <Div width="100%" height="1px" backgroundColor="black" mt="16px" mb="16px"/>
