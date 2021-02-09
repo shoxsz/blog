@@ -33,24 +33,24 @@ const EbookPage = function(props){
             </p>
 
             <p>
-            <span className="ebook-text-highlight">O que este eBook é:</span> Uma série de projetos práticos para você usar e aprender, o eBook vai dissecar cada projeto e explicar o que cada função faz e para que você deve usa-la.
+            <span className="ebook-text-highlight">O que este eBook é:</span> Uma série de projetos práticos para você usar e aprender, o eBook vai dissecar cada projeto e explicar o que cada função faz, como usar e pra que você deve usar cada função.
               Cada projeto te ensina um tópico importante da OpenGL, ao final do livro você será capaz de programar aplicações OpenGL sozinho, pois terá um conhecimento muito mais amplo da API.
             </p>
             
             <p>
-              Para quem está começando, este pode ser um conteúdo difícil de encontrar, e quando encontramos é difícil de entender, a maioria dos tutoriais ensinam apenas funções antigas da OpenGL,
+              Para quem está começando este pode ser um conteúdo difícil de encontrar, e quando encontra é difícil de entender, a maioria dos tutoriais ensinam apenas funções antigas da OpenGL,
               que não são mais usadas mais hoje em dia, além de serem limitados em conteúdo. Este eBook é guia completo para te tirar do zero e te colocar no lugar de um programador OpenGL.
             </p>
 
             <p>
-            <span className="ebook-text-highlight">O que este eBook não é:</span> Este eBook não vai te transformar num mestre jedi da programação de jogos, ele não te ensina a criar games AAA, nem mesmo jogos 2D <span className="ebook-highlight-dark">(leia o Bonus!)</span>, porém, ele vai te dar o pontapé inicial que
+            <span className="ebook-text-highlight">O que este eBook não é:</span> Este eBook não vai te transformar em um mestre jedi da programação de jogos, ele não te ensina a criar games AAA, nem mesmo jogos 2D <span className="ebook-highlight-dark">(leia o Bonus!)</span>, porém, ele vai te dar o pontapé inicial que
             você precisa para iniciar sua carreira, seja para criar suas próprias game engines ou para criar seus games do zero.
             </p>
 
             <p>
               <span className="ebook-text-highlight">O que você vai aprender:</span> Em cada capítulo o livro ensina um tópico importante da OpenGL.
               <ul className="ebook-chapters">
-                <li><span>No primeiro capítulo: </span>Você vai aprender famoso Hello World, você vai aprender a criar uma simples aplicação OpenGL com uma janela colorida!</li>
+                <li><span>No primeiro capítulo: </span>Você vai aprender o famoso Hello World, como criar uma simples aplicação OpenGL com uma janela colorida!</li>
                 <li><span>No segundo capítulo: </span>Você vai aprender a renderizar um simples triângulo na tela, este capítulo está recheado de informações importantes! como programar e criar um shader, como usar a memória de vídeo para carregar dados de geometria, como invocar um shader para renderização, o que são arrays de vértices, layout de vértice, etc.</li>
                 <li><span>No terceiro capítulo: </span>Você vai aprender uma técnica de renderização utilizando índices, essa técnica evita o consumo exagerado de memória e evita a repetição de vértices de um modelo 2D/3D.</li>
                 <li><span>No quarto e quinto capítulos: </span>Você vai aprender a aplicar texturas nas formas geométricas, e como lidar com texturas dentro dos shaders, também verá como utilizar múltiplas texturas e aplicar blend nelas!</li>
