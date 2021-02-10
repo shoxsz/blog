@@ -84,6 +84,14 @@ const EbookPage = function(props){
               <img src="cover.png"/>
             </Div>
           </Div>
+          <Div className="ebook-call">
+            <Div className="ebook-call-list">
+              <h3>GRÁTIS</h3>
+            </Div>
+            <Div className="ebook-cover">
+              <img src="cover-bonus.jpg"/>
+            </Div>
+          </Div>
 
           <h2 className="ebook-button-text ebook-offer">de <span className="ebook-price">R$40</span> por apenas R$27!</h2>
           <h4 className="ebook-button-text">Você tem até 7 dias para devolução</h4>
