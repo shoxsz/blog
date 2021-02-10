@@ -26,10 +26,9 @@ const EbookPage = function(props){
           <Card className="ebook-card">
 
             <Div display="flex"><img width="64" src="bs.png"/></Div>
-            
+
             <p>
-            <span className="ebook-text-highlight">Você é programador e que aprender OpenGL?</span> Este eBook reúne o conhecimento necessário para te ensinar a programar em OpenGL, ele 
-              te ensina de forma prática e rápida como programar em OpenGL para renderizar imagens 2D e 3D.
+              Esse eBook vai te ensinar a programar em OpenGL! programe aplicações 2D e 3D! solicite ainda o seu eBook bônus gratuito!
             </p>
 
             <p>
@@ -62,8 +61,8 @@ const EbookPage = function(props){
             </p>
 
             <p>
-            <span className="ebook-text-highlight">Bonus:</span> <span className="ebook-highlight-dark">Um eBook extra!</span> isso mesmo! este eBook vem acompanhado de uma série de projetos, dentre eles o projeto de um game 2D! este projeto te ensina como criar e estruturar o código de um jogo, usando OpenGL e C++, o eBook extra vai te ensinar a criar este game!
-            os conceitos por trás de cada módulo e as técnicas utilizadas para renderização de games 2D, nele você vai aprender como criar um Sprite Batch, um renderizador de fontes 2D, e mais! Para você adquirir este eBook extra basta me enviar um email com um pedido, uma semana após adquirir o eBook desta página!
+            <span className="ebook-text-highlight">Bonus:</span> <span className="ebook-highlight-dark">Um eBook extra gratuito!</span> que vai te ensinar a criar e programar um jogo 2D do zero!
+            aprenda os conceitos e as técnicas utilizadas para renderização de games 2D, como criar um Sprite Batch, um renderizador de fontes 2D, e mais! Para você adquirir esse eBook basta me enviar um email com um pedido, uma semana após adquirir finalizar a sua compra!
             </p>
 
             <Div display="flex" justifyContent="flex-end"><img width="64" src="ek.png"/></Div>
