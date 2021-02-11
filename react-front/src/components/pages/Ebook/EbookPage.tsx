@@ -60,7 +60,7 @@ const EbookPage = function(props){
             </p>
 
             <p>
-            Adquira o eBook <span className="ebook-highlight-dark">OpenGL na Prática</span> e ganhe o eBook <span className="ebook-text-highlight">Programando um Jogo 2D com OpenGL</span>, que vai te ensinar a criar
+            Ganhe o eBook <span className="ebook-text-highlight">Programando um Jogo 2D com OpenGL</span>, que vai te ensinar a criar
             e organizar um jogo 2D usando OpenGL e C++! é muto fácil, basta me enviar um email(<span className="ebook-highlight-dark">paulomarcio18p1@gmail.com</span>) pedindo o eBook uma semana após adquirir a sua cópia do <span className="ebook-highlight-dark">OpenGL na Prática</span>.
             </p>
 
