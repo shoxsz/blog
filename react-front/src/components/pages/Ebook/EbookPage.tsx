@@ -23,6 +23,27 @@ const EbookPage = function(props){
         </Div>
 
         <Div className="ebook-text">
+          <Div className="ebook-call">
+            <Div className="ebook-call-list">
+              <h3>Aprenda OpenGL</h3>
+              <ul className="ebook-list">
+                <li>Programação 2D</li>
+                <li>Programação 3D</li>
+                <li>Programação de Shaders</li>
+                <li>Transformações e projeções</li>
+                <li>Vários projetos para praticar</li>
+              </ul>
+            </Div>
+            <Div className="ebook-cover">
+              <img src="cover.png"/>
+            </Div>
+          </Div>
+          <h2 className="ebook-button-text ebook-offer">de <span className="ebook-price">R$40</span> por apenas R$27!</h2>
+          <h4 className="ebook-button-text">Você tem até 7 dias para devolução</h4>
+          <Div className="ebook-button">
+            <HotmartButton link="https://pay.hotmart.com/P45286896T?checkoutMode=10&bid=1609697548141" text="Compre Agora" />
+          </Div>
+
           <Card className="ebook-card">
 
             <Div display="flex"><img width="64" src="bs.png"/></Div>
@@ -59,46 +80,9 @@ const EbookPage = function(props){
               </ul>
             </p>
 
-            <p>
-            Ganhe o eBook <span className="ebook-text-highlight">Programando um Jogo 2D com OpenGL</span>, que vai te ensinar a criar
-            e organizar um jogo 2D usando OpenGL e C++! é muto fácil, basta me enviar um email(<span className="ebook-highlight-dark">paulomarcio18p1@gmail.com</span>) pedindo o eBook uma semana após adquirir a sua cópia do <span className="ebook-highlight-dark">OpenGL na Prática</span>.
-            </p>
-
             <Div display="flex" justifyContent="flex-end"><img width="64" src="ek.png"/></Div>
 
           </Card>
-
-          <Div className="ebook-call">
-            <Div className="ebook-call-list">
-              <h3>Aprenda OpenGL</h3>
-              <ul className="ebook-list">
-                <li>Programação 2D</li>
-                <li>Programação 3D</li>
-                <li>Programação de Shaders</li>
-                <li>Transformações e projeções</li>
-                <li>Vários projetos para praticar</li>
-              </ul>
-            </Div>
-            <Div className="ebook-cover">
-              <img src="cover.png"/>
-            </Div>
-          </Div>
-          <Div className="ebook-call">
-            <Div className="ebook-call-list">
-              <h3>GRÁTIS</h3>
-            </Div>
-            <Div className="ebook-cover">
-              <img src="cover-bonus.jpg"/>
-            </Div>
-          </Div>
-
-          <h2 className="ebook-button-text ebook-offer">de <span className="ebook-price">R$40</span> por apenas R$27!</h2>
-          <h4 className="ebook-button-text">Você tem até 7 dias para devolução</h4>
-          <Div className="ebook-button">
-            <HotmartButton link="https://pay.hotmart.com/P45286896T?checkoutMode=10&bid=1609697548141" text="Acesse Agora" />
-          </Div>
-
-          <Div width="100%" height="1px" backgroundColor="black" mt="16px" mb="16px"/>
         </Div>
 
         <Div className="ebook-examples">
