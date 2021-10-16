@@ -38,9 +38,9 @@ const EbookPage = function(props){
               <img src="cover.png"/>
             </Div>
           </Div>
-          <h2 className="ebook-button-text ebook-offer">de <span className="ebook-price">R$40</span> por apenas R$27!</h2>
+          <h2 className="ebook-button-text ebook-offer">Tudo isso por apenas R$60</h2>
           <h4 className="ebook-button-text">Você tem até 7 dias para devolução</h4>
-          <Div className="ebook-button">
+          <Div className="ebook-button" mb="2em">
             <HotmartButton link="https://pay.hotmart.com/P45286896T?checkoutMode=10&bid=1609697548141" text="Compre Agora" />
           </Div>
 
@@ -83,6 +83,12 @@ const EbookPage = function(props){
             <Div display="flex" justifyContent="flex-end"><img width="64" src="ek.png"/></Div>
 
           </Card>
+        
+          <h2 className="ebook-button-text ebook-offer">Tudo isso por apenas R$60</h2>
+          <h4 className="ebook-button-text">Você tem até 7 dias para devolução</h4>
+          <Div className="ebook-button" mb="2em">
+            <HotmartButton link="https://pay.hotmart.com/P45286896T?checkoutMode=10&bid=1609697548141" text="Compre Agora" />
+          </Div>
         </Div>
 
         <Div className="ebook-examples">
